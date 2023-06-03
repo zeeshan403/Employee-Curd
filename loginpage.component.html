@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h2>User Login Form</h2>
+                    <h6>♥ Fill Free To Login ♥</h6>  
+                </div>
+                <form [formGroup]="loginform">
+                  <div class="mb-3">
+                    <label  class="form-label">Email</label>
+                    <input type="email" class="form-control" formControlName="email">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label">Password</label>
+                    <input type="text" class="form-control" formControlName="password">
+                  </div>
+                  <button type="submit" class="btn btn-primary" (click)="getuser()">Login</button>
+                  <div class="a">
+                    <a routerLink="/signup">New User Create Account Signup</a>
+                  </div>
+                </form> 
+            </div>
+            
+        </div>
+    </div>
+</div>

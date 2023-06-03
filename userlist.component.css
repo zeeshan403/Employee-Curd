@@ -1,0 +1,36 @@
+
+h5{
+    color: white;
+    font-weight: 900;
+    margin-left: 1%;
+}
+
+.btn1{
+    color: white;
+    margin-left: 60%;
+    background-color: green;
+    border-radius: 40%;
+    width: 100px;
+    height: 40px;
+    border: none;
+    font-weight: 800;
+}
+table{
+    margin-top: 3px;
+    width: 800px;
+    margin-left: 120px;
+}
+a{
+    font-weight: 800;
+    margin-left: 10px;
+    border-radius: 40%;
+}
+h3{
+    color: green;
+    margin-top: 3px;
+    font-weight: 900;
+}
+.bb{
+    width: 90%;
+    margin-left: 80px;
+}

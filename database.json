@@ -1,0 +1,36 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "abc",
+      "age": 20,
+      "address": "lahore"
+    },
+    {
+      "id": 2,
+      "name": "xyz",
+      "age": 30,
+      "address": "toba tek singh"
+    },
+    {
+      "id": 3,
+      "name": "hello",
+      "age": 50,
+      "address": "multan"
+    }
+  ],
+  "Signup": [
+    {
+      "name": "ali",
+      "email": "ali@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "zeeshan",
+      "email": "zeeshan@gmail.com",
+      "password": "786786",
+      "id": 2
+    }
+  ]
+}

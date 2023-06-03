@@ -1,0 +1,66 @@
+
+<nav class="navbar navbar-expand-lg bg-primary">
+    <h5>Employee-Curd-App</h5>
+    <button class="btn1" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="allbtn()">Add-New</button>
+    <a routerLink="/login" class="btn btn-danger">Logout</a>
+  </nav>
+
+     <div class="bb"><marquee> <h3>Employee Records Detail</h3></marquee></div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of datalist">
+        <th scope="row">{{list.id}}</th>
+        <td>{{list.name}}</td>
+        <td>{{list.age}}</td>
+        <td>{{list.address}}</td>
+        <td>
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateuser(list)">Edit</button> &nbsp;
+            <button class="btn btn-danger" (click)="deleteuser(list.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" >Add new user</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="userform">
+          <div class="mb-3">
+            <label  class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Age</label>
+            <input type="number" class="form-control" formControlName="age">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Address</label>
+            <input type="text" class="form-control" formControlName="address">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">Close</button>
+        <button type="button" *ngIf="addbtn" class="btn btn-primary" (click)="postuser()">Add</button>
+        <button class="btn btn-dark" *ngIf="upbtn" (click)="putuser()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
